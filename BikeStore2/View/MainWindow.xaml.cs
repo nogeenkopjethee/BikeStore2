@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BikeStore2
+namespace BikeStore2.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
