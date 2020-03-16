@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image Margin="250,25,250,275" Source="Resources/Logo.jpg" />
+        <Image Margin="250,25,250,275" Source="../Resources/Logo.jpg" />
         <Button Content="This button does nothing at all." HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <!-- <TextBlock Text="🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲" TextWrapping="Wrap" Margin="103,36,142,267" FontSize="42" FontFamily="Segoe UI"/> -->
         <Button x:Name="EditBikesButton" Content="Edit Bikes" HorizontalAlignment="Left" Height="50" Margin="68,265,0,0" VerticalAlignment="Top" Width="125"/>
