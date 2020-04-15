@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="StoresEdit" Height="331.661" Width="355.294">
     <Grid>
-        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="10,10,10,71"/>
         <Button Content="Change Store" Command="{Binding ChangeStoreClick}" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="95"/>
         <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="140,255,0,0" VerticalAlignment="Top" Width="75"/>
-        
+        <ListBox Margin="30,60,170,76" ItemsSource="{Binding SelectedStore.Bikes}" DisplayMemberPath="Brand"/>
+        <ComboBox HorizontalAlignment="Left" Margin="201,10,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" DisplayMemberPath="Name" />
+
     </Grid>
 </Window>
