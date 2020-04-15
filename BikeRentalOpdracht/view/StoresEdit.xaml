@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="StoresEdit" Height="331.661" Width="355.294">
     <Grid>
-        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="0,0,-0.2,70.4"/>
+        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="10,10,10,71"/>
         <Button Content="Change Store" Command="{Binding ChangeStoreClick}" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="95"/>
         <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="140,255,0,0" VerticalAlignment="Top" Width="75"/>
         
