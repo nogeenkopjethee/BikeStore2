@@ -10,14 +10,14 @@
         <Label Content="Stores" HorizontalAlignment="Left" Margin="46,61,0,0" VerticalAlignment="Top" Height="47" Width="154" FontSize="24"/>
         <Label Content="Bikes" HorizontalAlignment="Left" Margin="293,61,0,0" VerticalAlignment="Top" Height="47" Width="154" FontSize="24"/>
         <ListBox ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="246" Margin="46,113,0,0" VerticalAlignment="Top" Width="202" Background="#FFEDECE6"/>
-        <ListBox ItemsSource="{Binding SelectedStores.Bikes}" DisplayMemberPath="Brands" HorizontalAlignment="Left" Height="246" Margin="293,113,0,0" VerticalAlignment="Top" Width="202" Background="#FFEDECE6"/>
+        <ListBox ItemsSource="{Binding SelectedStore.Bikes}" DisplayMemberPath="Brand" HorizontalAlignment="Left" Height="246" Margin="293,113,0,0" VerticalAlignment="Top" Width="202" Background="#FFEDECE6"/>
         <Label Content="Info" HorizontalAlignment="Left" Margin="538,61,0,0" VerticalAlignment="Top" Height="47" Width="154" FontSize="24"/>
         <Label Content="{Binding SelectedStore.Name}" HorizontalAlignment="Left" Margin="538,113,0,0" VerticalAlignment="Top" Height="32" Width="185" FontWeight="Bold"/>
         <Label Content="{Binding SelectedStore.Description}" HorizontalAlignment="Left" Margin="538,137,0,0" VerticalAlignment="Top" Height="28" Width="185"/>
         <Label Content="Bikes in stores: " HorizontalAlignment="Left" Margin="538,167,0,0" VerticalAlignment="Top" Height="27" Width="118"/>
         <Label Content="{Binding SelectedStore.Bikes.Count}" HorizontalAlignment="Left" Margin="661,167,0,0" VerticalAlignment="Top" Height="27" Width="40" FontWeight="Bold"/>
-        <Button Content="Edit Stores" HorizontalAlignment="Left" Margin="538,256,0,0" VerticalAlignment="Top" Width="81" Height="33" Background="#FFEEE6B4" Click="StoresButtonClick"/>
-        <Button Content="Edit Bikes" HorizontalAlignment="Left" Margin="637,256,0,0" VerticalAlignment="Top" Width="81" Height="33" Background="#FFEEE6B4" Click="BikesButtonClick"/>
+        <Button Content="Edit Stores" HorizontalAlignment="Left" Margin="538,256,0,0" VerticalAlignment="Top" Width="81" Height="33" Background="#FFEEE6B4" Command="{Binding OpenStoreEditClick}"/>
+        <Button Content="Edit Bikes in selected store" HorizontalAlignment="Left" Margin="637,256,0,0" VerticalAlignment="Top" Width="153" Height="33" Background="#FFEEE6B4" Command="{Binding OpenBikesEditClick}"/>
 
     </Grid>
 </Window>

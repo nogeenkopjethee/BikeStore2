@@ -9,7 +9,7 @@
         ">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" Text="Add a new bike." TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="353" FontSize="36" FontWeight="Bold"/>
-        <TextBox Margin="10,60,22,0" Text="This bike will be added to {Binding Sto}" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="10,60,22,0" Text="{Binding Store}" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
