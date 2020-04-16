@@ -9,7 +9,7 @@ namespace BikeRentalOpdracht.ViewModel
         public ObservableCollection<Store> Stores { get; set; }
         public Store SelectedStore { get; set; }
         public RelayCommand ChangeNameClick { get; set; }
-       public RelayCommand ChangeStoreClick { get; set; }
+        public RelayCommand ChangeStoreClick { get; set; }
         public RelayCommand DeleteClick { get; set; }
 
 
@@ -18,7 +18,7 @@ namespace BikeRentalOpdracht.ViewModel
             Stores = stores; // set the property Stores (that is bound to the view) to be the collection we get passed from the other View
             ChangeNameClick = new RelayCommand(ChangeName);
             DeleteClick = new RelayCommand(DeleteStore);
-           ChangeStoreClick = new RelayCommand(ChangeStore);
+            ChangeStoreClick = new RelayCommand(ChangeStore);
         }
 
 
@@ -38,7 +38,7 @@ namespace BikeRentalOpdracht.ViewModel
         public void ChangeName(object a)
         {
             
-                MessageBox.Show("Please select a student first");
+                MessageBox.Show("Please select a store first");
             
         }
 

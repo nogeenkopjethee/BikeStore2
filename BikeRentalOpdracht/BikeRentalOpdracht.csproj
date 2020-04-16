@@ -8,4 +8,12 @@
     <RootNamespace>BikeRentalOpdracht</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="view\StoresEdit - Copy.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="view\StoresEdit - Copy.xaml" />
+  </ItemGroup>
+
 </Project>
