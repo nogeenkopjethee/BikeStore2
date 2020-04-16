@@ -12,7 +12,6 @@ namespace BikeRentalOpdracht.ViewModel
         public RelayCommand ChangeStoreClick { get; set; }
         public RelayCommand DeleteClick { get; set; }
 
-
         public StoresEditViewModel(ObservableCollection<Store> stores)
         {
             Stores = stores; // set the property Stores (that is bound to the view) to be the collection we get passed from the other View

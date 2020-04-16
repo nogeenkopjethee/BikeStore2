@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BikeRentalOpdracht.View"
         mc:Ignorable="d"
-        Title="BikesEdit" Height="331.661" Width="355.294">
-    <Grid>
+        Title="BikesEdit" Height="450" Width="800">
+    <Grid Background="#FFCED0DC">
         <DataGrid ItemsSource="{Binding Bikes}" SelectedItem="{Binding SelectedBike}" Margin="0,0,-0.2,70.4" />
-        <Button Content="Change Bike" Command="{Binding ChangeBikeClick}" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="95"/>
-        <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="140,255,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Change Bike" Command="{Binding ChangeBikeClick}" HorizontalAlignment="Left" Margin="10,382,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="133,382,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
