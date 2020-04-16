@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:BikeRentalOpdracht.View"
         mc:Ignorable="d"
         Title="StoresEdit" Height="480" Width="800">
-    <Grid>
-        <Button Content="Change Store" Command="{Binding ChangeStoreClick}" HorizontalAlignment="Left" Margin="161,335,0,0" VerticalAlignment="Top" Width="95"/>
-        <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="52,335,0,0" VerticalAlignment="Top" Width="75"/>
-        <ListBox Margin="476,38,74,97" ItemsSource="{Binding SelectedStore.Bikes}" DisplayMemberPath="Brand"/>
-        <ComboBox HorizontalAlignment="Left" Margin="178,10,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" DisplayMemberPath="Name" />
+    <Grid Background="#FFCED0DC">
+        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="0,0,-0.2,70.4"/>
+        <Button Content="Change Store" Command="{Binding ChangeStoreClick}" HorizontalAlignment="Left" Margin="10,415,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="135,415,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
