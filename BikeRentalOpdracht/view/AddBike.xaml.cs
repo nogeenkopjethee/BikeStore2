@@ -9,17 +9,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BikeRentalOpdracht.ViewModel;
 
 namespace BikeRentalOpdracht.view
 {
     /// <summary>
-    /// Interaction logic for StoreDataEdit.xaml
+    /// Interaction logic for AddBike.xaml
     /// </summary>
-    public partial class StoreDataEdit : Window
+    public partial class AddBike : Window
     {
-        public StoreDataEdit()
+        public AddBike()
         {
             InitializeComponent();
+
+            DataContext = new AddBikeViewModel();
         }
     }
 }

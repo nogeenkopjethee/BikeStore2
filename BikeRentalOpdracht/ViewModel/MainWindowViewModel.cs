@@ -50,7 +50,7 @@ namespace BikeRentalOpdracht.ViewModel
                 new Store
                 {
                     Name = "FietsenAlmere",
-                    Address = "Wim kan plein 17",
+                    Address = "Wim Kanplein 17",
                     City = "Almere",
                     MaxCapacity = 30,
 
