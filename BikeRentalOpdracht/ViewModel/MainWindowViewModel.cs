@@ -1,6 +1,7 @@
 ﻿using BikeRentalOpdracht.Model;
 using System.Collections.ObjectModel;
 using System.Windows;
+using BikeRentalOpdracht.view;
 using BikeRentalOpdracht.View;
 
 namespace BikeRentalOpdracht.ViewModel
@@ -10,12 +11,18 @@ namespace BikeRentalOpdracht.ViewModel
         public ObservableCollection<Store> Stores { get; set; }
         public Store SelectedStore { get; set; }
 
+        public Bikes SelectedBike { get; set; }
+
+        public Store StoreToMoveBikeTo { get; set; }
 
         /**
          * The following two RelayCommands are needed to set up the bindings from the window.
          */
         public RelayCommand OpenStoreEditClick { get; set; }
         public RelayCommand OpenBikesEditClick { get; set; }
+
+        public RelayCommand MoveBikeClick { get; set; }
+
         public MainWindowViewModel()
         {
             Stores = new ObservableCollection<Store>
@@ -26,7 +33,7 @@ namespace BikeRentalOpdracht.ViewModel
                     Address = "De Ruijterkade 34",
                     City = "Amsterdam",
                      MaxCapacity = 30,
-                   
+
                     Bikes = new ObservableCollection<Bikes>
                     {
                         new Bikes
@@ -105,6 +112,8 @@ namespace BikeRentalOpdracht.ViewModel
             OpenStoreEditClick = new RelayCommand(StoresButtonClick);
 
             OpenBikesEditClick = new RelayCommand(BikesButtonClick);
+
+            MoveBikeClick = new RelayCommand(MoveBike);
         }
 
         private void StoresButtonClick(object obj)
@@ -114,7 +123,6 @@ namespace BikeRentalOpdracht.ViewModel
             StoresEdit view = new StoresEdit(); // make a new View
             view.DataContext = editVM; // pass the new View the ViewModel
             view.Show(); // show the View
-
         }
 
         private void BikesButtonClick(object obj)
@@ -131,6 +139,18 @@ namespace BikeRentalOpdracht.ViewModel
                 view.DataContext = editVM; // pass the new View the ViewModel
                 view.Show(); // show the View
             }
+        }
+
+        private void MoveBike(object obj)
+        {
+            Bikes bike = SelectedBike;
+            
+            // Remove bike from current store
+            SelectedStore.Bikes.Remove(SelectedBike);
+
+            StoreToMoveBikeTo.Bikes.Add(bike);
+
+            MessageBox.Show("Bike succesfully moved.");
         }
     }
 }

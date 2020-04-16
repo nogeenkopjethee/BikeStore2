@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="StoresEdit" Height="480" Width="800">
     <Grid Background="#FFCED0DC">
-        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="0,0,-0.2,70.4"/>
+        <DataGrid ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" Margin="0,0,-0.2,70.4" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Foreground="Black" Width="100" Header="Name" Binding="{Binding Name, Mode=TwoWay}" IsReadOnly="False" />
+                <DataGridTextColumn Foreground="Black" Width="140" Header="Address"  Binding="{Binding Address, Mode=TwoWay}" IsReadOnly="False"/>
+                <DataGridTextColumn Foreground="Black" Width="140" Header="City"  Binding="{Binding City, Mode=TwoWay}" IsReadOnly="False"/>
+                <DataGridTextColumn Foreground="Black" Width="100" Header="Max. Capacity"  Binding="{Binding MaxCapacity, Mode=TwoWay}" IsReadOnly="False"/>
+                <DataGridTextColumn Foreground="Black" Width="100" Header="Space left" Binding="{Binding SpaceLeft}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Content="Change Store" Command="{Binding ChangeStoreClick}" HorizontalAlignment="Left" Margin="10,415,0,0" VerticalAlignment="Top" Width="95"/>
         <Button Content="Delete" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="135,415,0,0" VerticalAlignment="Top" Width="75"/>
 
