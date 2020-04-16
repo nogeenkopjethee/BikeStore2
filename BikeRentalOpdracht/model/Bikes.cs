@@ -22,7 +22,7 @@ namespace BikeRentalOpdracht.Model
         public int Size { get => _size; set { _size = value; Notify("Size"); } }
         public BikeType Type { get => _type; set { _type = value; Notify("Type"); } }
         public bool Rented { get => _rented; set { _rented = value; Notify("Rented"); } }
-        public ObservableCollection<Store> Stores { get; set; }
+       
       
 
         public void Notify(string propertyName)
