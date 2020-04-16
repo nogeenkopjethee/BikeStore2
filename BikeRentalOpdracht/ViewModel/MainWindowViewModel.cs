@@ -1,7 +1,6 @@
 ﻿using BikeRentalOpdracht.Model;
 using System.Collections.ObjectModel;
 using System.Windows;
-using BikeRentalOpdracht.view;
 using BikeRentalOpdracht.View;
 
 namespace BikeRentalOpdracht.ViewModel
